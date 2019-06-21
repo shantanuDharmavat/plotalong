@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/customerListCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutProposal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@color/accent"
+            android:weightSum="5">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Proposal : "
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_view_size_head" />
+
+            <TextView
+                android:id="@+id/textViewProposal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_view_size" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/imageViewHasConflict"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:scaleType="center"
+                app:backgroundTint="@color/transparent"
+                app:elevation="0dp"
+                app:fabSize="normal"
+                app:srcCompat="@drawable/ic_notification" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Expires On : "
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_view_size_head" />
+
+            <TextView
+                android:id="@+id/textViewExpiresOn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_view_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutHeading"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/accent"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:layout_weight="0.7"
+                android:gravity="center"
+                android:text="WHEN"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_view_size_head" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:layout_weight="0.7"
+                android:gravity="center"
+                android:text="WHO"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_view_size_head" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:layout_weight="1.6"
+                android:gravity="center"
+                android:text="WHAT"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_view_size_head" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/textViewWhen"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.7"
+                android:gravity="center"
+                android:text="When"
+                android:textColor="@color/text_view_show_color"
+                android:textSize="@dimen/text_view_size"
+                android:textStyle="normal" />
+
+
+            <TextView
+                android:id="@+id/textViewWho"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.7"
+                android:gravity="center"
+                android:text="Who"
+                android:textColor="@color/text_view_show_color"
+                android:textSize="@dimen/text_view_size"
+                android:textStyle="normal" />
+
+
+            <TextView
+                android:id="@+id/textViewWhat"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1.6"
+                android:gravity="center_vertical"
+                android:text="What"
+                android:textColor="@color/text_view_show_color"
+                android:textSize="@dimen/text_view_size"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

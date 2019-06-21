@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.plotalong.android">
+
+    <!-- Permissions for the application start here -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <!-- Permissions for the app end here -->
+    <application
+        android:name=".helper.ApplicationHelper"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:screenOrientation="landscape"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        ><!--
+        android:hardwareAccelerated="false"
+        NOTE hardwareAccelerated slows down the tab but displays the images which are hard to load-->
+
+        <!-- Activities of the app start here -->
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="com.google.intent.category.CARDBOARD" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.AddCustomerActivity"
+            android:label="@string/title_activity_customer"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.LightNoActionBar" />
+        <activity
+            android:name=".activity.FeedbackActivity"
+            android:label="@string/title_activity_feedback"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+
+        </activity>
+
+
+        <activity
+            android:name=".activity.CustomerActivity"
+            android:theme="@style/AppTheme.LightNoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- Activities of the app end here -->
+
+
+        <!-- SERVICES FOR THE APPLICATION START HERE -->
+        <service android:name=".firebase.FirebaseMessageService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".firebase.FirebaseIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.google.android.gms.analytics.AnalyticsService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".helper.GPSBindService"
+            android:enabled="true" />
+        <service
+            android:name=".helper.GPSUnbindService"
+            android:enabled="true" />
+
+        <receiver
+            android:name=".helper.ConnectivityReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <!-- SERVICES FOR THE APPLICATION END HERE -->
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity android:name=".activity.VideoCapture" />
+    </application>
+
+</manifest>

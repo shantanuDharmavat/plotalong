@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cyan"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textViewFeedbackType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/feedback_type"
+        android:textAllCaps="true"
+        android:textColor="@color/text_view_show_color"
+        android:textSize="@dimen/text_view_size_head"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@color/background_color"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.7"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="@string/customer_name_key"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_view_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewFeedbackCustomerName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.3"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="@string/customer_name_key"
+                    android:textColor="@color/text_view_show_color"
+                    android:textSize="@dimen/text_view_size_head" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.7"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="@string/email_id_key"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_view_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewFeedbackCustomerEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.3"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="@string/email_id_key"
+                    android:textColor="@color/text_view_show_color"
+                    android:textSize="@dimen/text_view_size_head" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.7"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="@string/mobile_key"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_view_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewFeedbackMobile"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.3"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="@string/mobile_key"
+                    android:textColor="@color/text_view_show_color"
+                    android:textSize="@dimen/text_view_size_head" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.7"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="@string/sales_person_key"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_view_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewFeedbackSalesPerson"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.3"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="@string/sales_person_key"
+                    android:textColor="@color/text_view_show_color"
+                    android:textSize="@dimen/text_view_size_head" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.7"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="@string/project_name_key"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_view_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewFeedbackProjectName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.3"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="@string/project_name_key"
+                    android:textColor="@color/text_view_show_color"
+                    android:textSize="@dimen/text_view_size_head" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.7"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="@string/proposal_name_key"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_view_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewFeedbackProposalName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.3"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="@string/proposal_name_value"
+                    android:textColor="@color/text_view_show_color"
+                    android:textSize="@dimen/text_view_size_head" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/buttonAudioFeedback"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect"
+                    android:padding="5dp"
+                    android:text="@string/audio_feedback"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/button_text_size" />
+
+
+                <Button
+                    android:id="@+id/buttonVideoFeedback"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect"
+                    android:padding="5dp"
+                    android:text="@string/video_feedback"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/button_text_size" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@color/background_color"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:weightSum="10">
+
+            <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background_color"
+                tools:context="com.truiton.bottomsheet_persistent.MainActivity">
+
+                <android.support.v4.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                    <include layout="@layout/plot_list_add_proposal" />
+                </android.support.v4.widget.NestedScrollView>
+
+                <RelativeLayout
+                    android:id="@+id/bottomSheetForAudio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    app:behavior_hideable="true"
+                    app:behavior_peekHeight="0dp"
+                    app:elevation="4dp"
+                    app:layout_behavior="@string/bottom_sheet_behavior">
+
+                    <include layout="@layout/audio_feedback" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/bottomSheetForVideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    app:behavior_hideable="true"
+                    app:behavior_peekHeight="0dp"
+                    app:elevation="4dp"
+                    app:layout_behavior="@string/bottom_sheet_behavior">
+
+                    <include layout="@layout/video_feedback" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/bottomSheetForText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    app:behavior_hideable="true"
+                    app:behavior_peekHeight="0dp"
+                    app:elevation="4dp"
+                    app:layout_behavior="@string/bottom_sheet_behavior">
+
+                    <include layout="@layout/text_feedback" />
+
+                </RelativeLayout>
+
+            </android.support.design.widget.CoordinatorLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

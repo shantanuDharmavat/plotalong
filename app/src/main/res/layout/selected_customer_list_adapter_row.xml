@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/activatedBackgroundIndicator"
+    android:minHeight="?android:attr/listPreferredItemHeightSmall"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/selectedCustomerListCustomerProfile"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ic_customer_icon" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/FabSelectedCustomerAddCust"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        app:backgroundTint="@color/accent"
+        app:srcCompat="@drawable/ic_list_add" />
+
+
+    <TextView
+        android:id="@+id/selectedCustomerListCustomerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/selectedCustomerListCustomerProfile"
+        android:text="@string/customer_name"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_view_size_head" />
+
+
+    <net.cachapa.expandablelayout.ExpandableLayout
+        android:id="@+id/expandableLayoutSelectedCustomer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/selectedCustomerListCustomerProfile"
+        android:background="@color/transparent"
+        android:orientation="horizontal"
+        app:el_duration="1000"
+        app:el_expanded="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/imageViewSelectedCustomerInfo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                app:backgroundTint="@color/accent"
+                app:srcCompat="@drawable/ic_info" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/imageViewSelectedCustomerEndSession"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                app:backgroundTint="@color/accent"
+                app:srcCompat="@drawable/ic_list_remove" />
+
+        </LinearLayout>
+    </net.cachapa.expandablelayout.ExpandableLayout>
+</RelativeLayout>

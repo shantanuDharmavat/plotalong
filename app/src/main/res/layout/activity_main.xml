@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/navigation_drawer_left"
+        android:layout_width="@dimen/navigation_drawer_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/customerListCardView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/nav_header_height"
+            android:layout_margin="2dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/side_nav_bar"
+                android:orientation="vertical"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2.5"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:id="@+id/imageViewUserProfile"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        app:srcCompat="@drawable/ic_customer_icon" />
+
+                    <TextView
+                        android:id="@+id/textViewUsername"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/username"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textViewUserEmailId"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0.5"
+                    android:text="@string/email_id"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <ListView
+            android:id="@+id/listViewForLeftNavDrawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="1dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/navigation_drawer_right"
+        android:layout_width="@dimen/navigation_drawer_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:layout_marginBottom="50dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="2dp"
+        android:weightSum="3">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayoutRightDrawerListView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:background="@color/white"
+            android:visibility="visible">
+
+            <ListView
+                android:id="@+id/listViewForRightNavDrawer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:choiceMode="singleChoice"
+                android:divider="@android:color/darker_gray"
+                android:dividerHeight="1dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutRightDrawerImageView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:visibility="visible"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/imageViewProjectIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutRightDrawerPlotInfo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="0.5"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:text="@string/plot_number"
+                    android:textAllCaps="true"
+                    android:textColor="@color/accent"
+                    android:textSize="@dimen/text_view_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewProjectNo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/project_no"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_view_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1.5"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/frontage"
+                        android:textColor="@color/accent"
+                        android:textSize="@dimen/mini_header_size" />
+
+                    <TextView
+                        android:id="@+id/textViewPlotFrontage"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/frontage"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_view_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/area"
+                        android:textColor="@color/accent"
+                        android:textSize="@dimen/mini_header_size" />
+
+                    <TextView
+                        android:id="@+id/textViewPlotArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/area"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_view_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/status"
+                        android:textColor="@color/accent"
+                        android:textSize="@dimen/mini_header_size" />
+
+                    <TextView
+                        android:id="@+id/textViewPlotStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/status"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_view_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/type"
+                        android:textColor="@color/accent"
+                        android:textSize="@dimen/mini_header_size" />
+
+                    <TextView
+                        android:id="@+id/textViewPlotType"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/type"
+                        android:visibility="gone"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_view_size" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutRightDrawerRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:background="@color/white"
+            android:visibility="visible">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewForViewLikeCustomer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>

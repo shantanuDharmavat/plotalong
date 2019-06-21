@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="userAuth"
+            type="com.plotalong.android.model.commonModel.UserAuthModel" />
+
+        <variable
+            name="main"
+            type="com.plotalong.android.activity.MainActivity" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            android:paddingLeft="100dp"
+            android:paddingRight="50dp"
+            android:paddingTop="100dp">
+
+            <EditText
+                android:id="@+id/editText"
+                style="@style/LoginEditText"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:ems="10"
+                android:hint="@string/user_name"
+                android:inputType="textPersonName"
+                android:text="@={userAuth.userName}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/edit_text_size" />
+
+            <EditText
+                android:id="@+id/editText2"
+                style="@style/LoginEditText"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:ems="10"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:text="@={userAuth.userPassword}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/edit_text_size" />
+
+            <EditText
+                android:id="@+id/editText3"
+                style="@style/LoginEditText"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:ems="10"
+                android:hint="@string/pass_phrase"
+                android:inputType="text"
+                android:text="@={userAuth.userPassphrase}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/edit_text_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect"
+                    android:onClick="@{() -> main.onCancelClick()}"
+                    android:text="@string/cancel"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/button_text_size" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect"
+                    android:onClick="@{() -> main.onAuthButtonClick()}"
+                    android:text="@string/submit"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/button_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <android.support.design.widget.CoordinatorLayout
+                android:id="@+id/coordinatorLayoutOfRegistrationGuidelines"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true">
+
+                <android.support.v4.widget.NestedScrollView
+                    android:id="@+id/bottomSheetUserAuth"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:clipToPadding="true"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="100dp"
+                    android:paddingTop="50dp"
+                    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/white"
+                            android:padding="16dp"
+                            android:text="Registration"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_view_size" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/white"
+                            android:padding="16dp"
+                            android:text="Enter username and password along with the passphrase provided by developer."
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_view_size" />
+                    </LinearLayout>
+                </android.support.v4.widget.NestedScrollView>
+            </android.support.design.widget.CoordinatorLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

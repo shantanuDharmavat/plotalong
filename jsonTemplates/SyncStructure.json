@@ -1,0 +1,117 @@
+{
+  "customers": [
+    {
+      "cust_sync_status": "new",
+      "cust_device_id": "",
+      "cust_first_name": "",
+      "cust_last_name": ""
+    },
+    {
+      "cust_sync_status": "existing",
+      "cust_device_id": "",
+      "cust_first_name": "",
+      "cust_last_name": ""
+    }
+  ],
+  "sessions": [
+    {
+      "type": "visit",
+      "cgc_group_id": "",
+      "cust_unique_id": "",
+      "trace": {}
+    },
+    {
+      "type": "meeting",
+      "cgc_group_id": "",
+      "cust_unique_id": "",
+      "trace": {}
+    }
+  ],
+  "feedback": [
+    {
+      "group_id": "",
+      "cust_unique_id": "",
+      "sets": {},
+      "audio": "",
+      "video": "",
+      "notes": ""
+    },
+    {
+      "group_id": "",
+      "cust_unique_id": "",
+      "sets": {},
+      "audio": "",
+      "video": "",
+      "notes": ""
+    },
+    {
+      "group_id": "",
+      "cust_unique_id": "",
+      "sets": {},
+      "audio": "",
+      "video": "",
+      "notes": ""
+    },
+    {
+      "group_id": "",
+      "cust_unique_id": "",
+      "sets": {},
+      "audio": "",
+      "video": "",
+      "notes": ""
+    }
+  ],
+  "proposals": [
+    {
+      "devc_prop_id": "",
+      "prop_prods": [
+        {
+          "plot_id": "",
+          "prod_id": "",
+          "prod_type": "plot"
+        },
+        {
+          "plot_id": "",
+          "prod_id": "",
+          "prod_type": "plot"
+        }
+      ],
+      "devc_group_id": "",
+      "spid": "",
+      "cust_unique_id": "",
+      "date": "",
+      "": ""
+    },
+    {
+      "devc_prop_id": "",
+      "prop_prods": {
+        "plot_id": "",
+        "prod_id": "",
+        "prod_type": "plot"
+      },
+      "devc_group_id": "",
+      "spid": "",
+      "cust_unique_id": "",
+      "date": "",
+      "": ""
+    }
+  ],
+  "activities": [
+    {
+      "spid": "",
+      "device_id": "",
+      "who": "sales person name",
+      "when": "date time stamp",
+      "what": "image to be uploaded",
+      "where": "geo coordinates"
+    },
+    {
+      "spid": "",
+      "device_id": "",
+      "who": "sales person name",
+      "when": "",
+      "what": "",
+      "where": ""
+    }
+  ]
+}

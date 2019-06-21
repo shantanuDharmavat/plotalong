@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="maphandler"
+            type="com.plotalong.android.fragment.MapFragment" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rootRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.plotalong.android.activity.MainActivity" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:weightSum="6">
+
+                <Button
+                    android:id="@+id/button_menu"
+                    android:layout_width="40dp"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_weight="0.3"
+                    android:background="@drawable/menu_button"
+                    android:onClick="@{() -> maphandler.menuButtonClick()}"
+                    android:visibility="gone" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/selectedCustomerRecyclerView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:background="@color/transparent"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_weight="5.2"
+                    android:gravity="center" />
+
+                <Button
+                    android:id="@+id/searchCustomerButton"
+                    android:layout_width="150dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="60dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/ripple_effect"
+                    android:gravity="center"
+                    android:onClick="@{() -> maphandler.openBottomSheetCustomerList()}"
+                    android:text="@string/btn_customer"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingLeft="50dp"
+                android:paddingRight="100dp"
+                android:paddingTop="50dp">
+
+                <android.support.design.widget.CoordinatorLayout
+                    android:id="@+id/customerSearchCoordinatorLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fitsSystemWindows="true"
+                    android:visibility="gone">
+
+                    <android.support.v4.widget.NestedScrollView
+                        android:id="@+id/bottomSheetCustomerSearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:clipToPadding="true"
+                        app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/customerListCardView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="5dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp"
+                                    android:background="@android:color/white"
+                                    android:orientation="horizontal"
+                                    android:padding="5dp"
+                                    android:weightSum="7">
+
+                                    <EditText
+                                        android:id="@+id/searchCustomerEditText"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="5.2"
+                                        android:hint="@string/search_customer"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/faint_black" />
+
+                                    <!--<ImageView
+                                        android:id="@+id/addNewCustomerImageView"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.9"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_marginRight="8dp"
+                                        android:background="@drawable/ic_cust_add"
+                                        android:onClick="@{() -> maphandler.onAddCustomerClick()}" />
+
+-->
+
+
+                                    <android.support.design.widget.FloatingActionButton
+                                        android:id="@+id/addNewCustomerImageView"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_marginRight="8dp"
+                                        android:layout_weight="0.9"
+                                        android:onClick="@{() -> maphandler.onAddCustomerClick()}"
+                                        android:scaleType="fitXY"
+                                        app:backgroundTint="@color/accent"
+                                        app:srcCompat="@drawable/ic_cust_add" />
+
+
+                                    <ImageView
+                                        android:id="@+id/goToProjectImageView"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="right"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_marginRight="8dp"
+                                        android:layout_weight="0.9"
+                                        android:background="@drawable/ic_arrow_forward_black_24dp"
+                                        android:onClick="@{() -> maphandler.onStartSessionClick()}"
+                                        android:visibility="visible" />
+
+                                </LinearLayout>
+                            </android.support.v7.widget.CardView>
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/customerRecyclerView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                        </LinearLayout>
+                    </android.support.v4.widget.NestedScrollView>
+                </android.support.design.widget.CoordinatorLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <com.sa90.materialarcmenu.ArcMenu
+            android:id="@+id/arcmenu_android_example_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="60dp"
+            android:layout_marginRight="20dp"
+            android:clipChildren="false"
+            android:visibility="visible"
+            app:menu_color="@color/primary"
+            app:menu_open="arc_left"
+            app:menu_scr="@drawable/ic_menu"
+            android:onClick="@{() -> maphandler.arcMenuClicked()}">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab_arc_menu_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{() -> maphandler.onNearbyClick()}"
+                    app:backgroundTint="@color/primary"
+                    app:srcCompat="@drawable/ic_meeting" />
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/nearby"
+                    android:textStyle="normal"
+                    style="@style/TextBorderShadow"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab_arc_menu_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{() -> maphandler.onDirectionsClick()}"
+                    app:backgroundTint="@color/primary"
+                    app:srcCompat="@drawable/ic_meeting" />
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/routes"
+                    android:textStyle="normal"
+                    style="@style/TextBorderShadow"/>
+
+
+            </LinearLayout>
+
+            <!--<LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:orientation="horizontal">
+                &lt;!&ndash;android:textColor="@color/text_view_show_color"&ndash;&gt;
+
+                <TextView
+                    android:id="@+id/tv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_marginRight="5dp"
+                    android:text="Start Visit"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    style="@style/TextBorderShadow"/>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab_arc_menu_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{() -> maphandler.startSiteVisit()}"
+                    app:backgroundTint="@color/primary"
+                    app:srcCompat="@drawable/ic_meeting" />
+            </LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab_arc_menu_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{() -> maphandler.onLayerClick()}"
+                    app:backgroundTint="@color/primary"
+                    app:srcCompat="@drawable/ic_fab_layers" />
+
+                <TextView
+                    android:id="@+id/tv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/layer"
+                    style="@style/TextBorderShadow"
+                    android:textStyle="normal" />
+            </LinearLayout>
+        </com.sa90.materialarcmenu.ArcMenu>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,89 @@
+{
+  "header": {
+    "devl_id": "2",
+    "proj_id": "5",
+    "phas_id": "83",
+    "spid" : "",
+    "cust_unique_id" : "",
+    "cgc_group_id" : "",
+    "when" : "",
+    "device_id" : "",
+    "location" : "",
+	"version" : ""
+  },
+  "sets": [
+    {
+      "question": "Question 1",
+      "type": "number",
+      "max": "10",
+      "min": "0",
+      "ans": ""
+    },
+    {
+      "question": "Question 2",
+      "type": "checkbox",
+      "max": "10",
+      "min": "0",
+      "ans": ""
+    },
+    {
+      "question": "Question 3",
+      "type": "radio",
+      "max": "10",
+      "min": "0",
+      "ans": ""
+    },
+    {
+      "question": "Question 4",
+      "type": "rating",
+      "max": "10",
+      "min": "0",
+      "ans": ""
+    },
+    {
+      "question": "Question 5",
+      "type": "text",
+      "max": "10",
+      "min": "0",
+      "ans": ""
+    },
+    {
+      "question": "Question 6",
+      "type": "rating",
+      "max": "10",
+      "min": "0",
+      "ans": ""
+    },
+    {
+      "question": "Question 7",
+      "type": "rating",
+      "max": "10",
+      "min": "0",
+      "ans": ""
+    }
+    ,
+    {
+      "question": "Question 8",
+      "type": "rating",
+      "max": "10",
+      "min": "0",
+      "ans": ""
+    },
+    {
+      "question": "Question 9",
+      "type": "rating",
+      "max": "10",
+      "min": "0",
+      "ans": ""
+    }
+    ,
+    {
+      "question": "Question 10",
+      "type": "rating",
+      "max": "10",
+      "min": "0",
+      "ans": ""
+    }
+    
+  ]
+}

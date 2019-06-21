@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="8">
+
+            <ImageView
+                android:id="@+id/custProfileImageView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_photo" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="10dp"
+                android:layout_weight="7"
+                android:orientation="vertical">
+
+                <!--<android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    card_view:cardCornerRadius="4dp">-->
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical"
+                            android:weightSum="15">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1.5"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="30dp"
+                                    android:layout_weight="1"
+                                    android:paddingLeft="5dp">
+
+                                    <EditText
+                                        android:id="@+id/custFirstNameEditText"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:hint="First Name"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+                                        android:maxLines="1"
+                                        android:textColorHint="@color/black"
+                                        android:textSize="20sp" />
+
+                                </android.support.design.widget.TextInputLayout>
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_weight="1"
+                                    android:paddingLeft="5dp">
+
+                                    <EditText
+                                        android:id="@+id/custLastNameEditText"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:hint="Last Name"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+                                        android:maxLines="1"
+                                        android:textColorHint="@color/black"
+                                        android:textSize="20sp" />
+
+                                </android.support.design.widget.TextInputLayout>
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1.5"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="30dp"
+                                    android:layout_weight="1"
+                                    android:paddingLeft="5dp">
+
+                                    <EditText
+                                        android:id="@+id/custMobileEditText"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:hint="Mobile"
+                                        android:inputType="number"
+                                        android:maxLength="10"
+                                        android:textColorHint="@color/black"
+                                        android:textSize="20sp" />
+
+                                </android.support.design.widget.TextInputLayout>
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_weight="1"
+                                    android:paddingLeft="5dp">
+
+                                    <EditText
+                                        android:id="@+id/custLandlineEditText"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:hint="Landline"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+                                        android:maxLines="1"
+                                        android:textColorHint="@color/black"
+                                        android:textSize="20sp" />
+
+                                </android.support.design.widget.TextInputLayout>
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1.5"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="30dp"
+                                    android:layout_weight="1"
+                                    android:paddingLeft="5dp">
+
+                                    <EditText
+                                        android:id="@+id/custEmailEditText"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:hint="Email"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+                                        android:maxLines="1"
+                                        android:textColorHint="@color/black"
+                                        android:textSize="20sp" />
+
+                                </android.support.design.widget.TextInputLayout>
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_weight="1"
+                                    android:paddingLeft="5dp">
+
+                                    <EditText
+                                        android:id="@+id/custBudgetEditText"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:hint="Budget"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+                                        android:maxLines="1"
+                                        android:textColorHint="@color/black"
+                                        android:textSize="20sp" />
+
+                                </android.support.design.widget.TextInputLayout>
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1.5"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="30dp"
+                                    android:layout_weight="1"
+                                    android:paddingLeft="5dp">
+
+                                    <EditText
+                                        android:id="@+id/custAreaEditText"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:hint="Area"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+                                        android:maxLines="1"
+                                        android:textColorHint="@color/black"
+                                        android:textSize="20sp" />
+
+                                </android.support.design.widget.TextInputLayout>
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_weight="1"
+                                    android:paddingLeft="5dp">
+
+                                    <EditText
+                                        android:id="@+id/custPreferLocationEditText"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:hint="Prefer Location"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+                                        android:maxLines="1"
+                                        android:textColorHint="@color/black"
+                                        android:textSize="20sp" />
+
+                                </android.support.design.widget.TextInputLayout>
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1.5"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="30dp"
+                                    android:layout_weight="1"
+                                    android:paddingLeft="5dp">
+
+                                    <EditText
+                                        android:id="@+id/custOccupationEditText"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:hint="Occupation"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+                                        android:maxLines="1"
+                                        android:textColorHint="@color/black"
+                                        android:textSize="20sp" />
+
+                                </android.support.design.widget.TextInputLayout>
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_weight="1"
+                                    android:paddingLeft="5dp">
+
+                                    <EditText
+                                        android:id="@+id/custSonOfEditText"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:hint="Son of"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+                                        android:maxLines="1"
+                                        android:textColorHint="@color/black"
+                                        android:textSize="20sp" />
+
+                                </android.support.design.widget.TextInputLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1.5"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="30dp"
+                                    android:layout_weight="1"
+                                    android:paddingLeft="5dp">
+
+                                    <EditText
+                                        android:id="@+id/custAdharEditText"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:hint="Aadhar No"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+                                        android:maxLines="1"
+                                        android:textColorHint="@color/black"
+                                        android:textSize="20sp" />
+
+                                </android.support.design.widget.TextInputLayout>
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_weight="1"
+                                    android:paddingLeft="5dp">
+
+                                    <EditText
+                                        android:id="@+id/custPanEditText"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:hint="PAN No"
+                                        android:imeOptions="actionDone"
+                                        android:inputType="text"
+                                        android:maxLines="1"
+                                        android:textColorHint="@color/black"
+                                        android:textSize="20sp" />
+
+                                </android.support.design.widget.TextInputLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <RadioGroup
+                                    android:id="@+id/custSexRadioGroup"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="70dp"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <RadioButton
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:checked="true"
+                                        android:text="Male"
+                                        android:textSize="20sp" />
+
+                                    <RadioButton
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:text="Female"
+                                        android:textSize="20sp" />
+                                </RadioGroup>
+
+
+                                <RadioGroup
+                                    android:id="@+id/custMarriedStatusRadioGroup"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="50dp"
+                                    android:layout_marginRight="70dp"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <RadioButton
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:checked="true"
+                                        android:text="Married"
+                                        android:textSize="20sp" />
+
+                                    <RadioButton
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:text="Unmarried"
+                                        android:textSize="20sp" />
+                                </RadioGroup>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_weight="1.5"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <Button
+                                    android:id="@+id/custFormClearButton"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="200dp"
+                                    android:layout_marginRight="100dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/ripple_effect"
+                                    android:text="CLEAR"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp" />
+
+                                <Button
+                                    android:id="@+id/custFormSubmitButton"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="100dp"
+                                    android:layout_marginRight="200dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/ripple_effect"
+                                    android:text="SUBMIT"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </ScrollView>
+                <!--</android.support.v7.widget.CardView>-->
+            </LinearLayout>
+        </LinearLayout>
+</LinearLayout>

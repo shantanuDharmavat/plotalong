@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:weightSum="15">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:paddingLeft="5dp">
+
+                <EditText
+                    android:id="@+id/fragCustFirstNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="First Name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColorHint="@color/black"
+                    android:textSize="20sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:paddingLeft="5dp">
+
+                <EditText
+                    android:id="@+id/fragCustLastNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Last Name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColorHint="@color/black"
+                    android:textSize="20sp" />
+
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:paddingLeft="5dp">
+
+                <EditText
+                    android:id="@+id/fragCustMobileEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Mobile"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textColorHint="@color/black"
+                    android:textSize="20sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:paddingLeft="5dp">
+
+                <EditText
+                    android:id="@+id/fragCustLandlineEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Landline"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColorHint="@color/black"
+                    android:textSize="20sp" />
+
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:paddingLeft="5dp">
+
+                <EditText
+                    android:id="@+id/fragCustEmailEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Email"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColorHint="@color/black"
+                    android:textSize="20sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:paddingLeft="5dp">
+
+                <EditText
+                    android:id="@+id/fragCustBudgetEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Budget"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColorHint="@color/black"
+                    android:textSize="20sp" />
+
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:paddingLeft="5dp">
+
+                <EditText
+                    android:id="@+id/fragCustAreaEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Area"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColorHint="@color/black"
+                    android:textSize="20sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:paddingLeft="5dp">
+
+                <EditText
+                    android:id="@+id/fragCustPreferLocationEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Prefer Location"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColorHint="@color/black"
+                    android:textSize="20sp" />
+
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:paddingLeft="5dp">
+
+                <EditText
+                    android:id="@+id/fragCustOccupationEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Occupation"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColorHint="@color/black"
+                    android:textSize="20sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:paddingLeft="5dp">
+
+                <EditText
+                    android:id="@+id/fragCustSonOfEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Son of"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColorHint="@color/black"
+                    android:textSize="20sp" />
+
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:paddingLeft="5dp">
+
+                <EditText
+                    android:id="@+id/fragCustAdharEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Aadhar No"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColorHint="@color/black"
+                    android:textSize="20sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:paddingLeft="5dp">
+
+                <EditText
+                    android:id="@+id/fragCustPanEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="PAN No"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColorHint="@color/black"
+                    android:textSize="20sp" />
+
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RadioGroup
+                android:id="@+id/fragCustSexRadioGroup"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="70dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="Male"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Female"
+                    android:textSize="20sp" />
+            </RadioGroup>
+
+
+            <RadioGroup
+                android:id="@+id/fragCustMarriedStatusRadioGroup"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="70dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="Married"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Unmarried"
+                    android:textSize="20sp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1.5"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/fragCustFormUpdateButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_effect"
+                android:text="UPDATE"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
